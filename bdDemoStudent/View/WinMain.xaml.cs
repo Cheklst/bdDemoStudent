@@ -46,5 +46,11 @@ namespace bdDemoStudent.View
                 Close();
             }
         }
+
+        private void Button_Click(object sender, RoutedEventArgs e)
+        {
+            Helper.ActiveAdd();
+            Application.Current.Shutdown();
+        }
     }
 }
