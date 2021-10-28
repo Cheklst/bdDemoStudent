@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+ <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <!-- Diagram content (shape and connector positions) -->
+    <edmx:Diagrams>
+      <Diagram DiagramId="1a37c59033b948b9abdd8fb9331ec288" Name="Diagram1" ZoomLevel="71">
+        <EntityTypeShape EntityType="DemoBDStudentModel.Activites" Width="1.5" PointX="5.25" PointY="2.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="DemoBDStudentModel.Country" Width="1.5" PointX="0.75" PointY="2.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="DemoBDStudentModel.Genders" Width="1.5" PointX="0.75" PointY="6" IsExpanded="true" />
+        <EntityTypeShape EntityType="DemoBDStudentModel.Groups" Width="1.5" PointX="0.75" PointY="8.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="DemoBDStudentModel.Roles" Width="1.5" PointX="0.75" PointY="10.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="DemoBDStudentModel.sysdiagrams" Width="1.5" PointX="5.75" PointY="5.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="DemoBDStudentModel.Users" Width="1.5" PointX="3" PointY="1.125" IsExpanded="true" />
+        <AssociationConnector Association="DemoBDStudentModel.FK_Activites_Users" ManuallyRouted="false" />
+        <AssociationConnector Association="DemoBDStudentModel.FK_Users_Country" ManuallyRouted="false" />
+        <AssociationConnector Association="DemoBDStudentModel.FK_Users_Genders" ManuallyRouted="false" />
+        <AssociationConnector Association="DemoBDStudentModel.FK_Users_Groups" ManuallyRouted="false" />
+        <AssociationConnector Association="DemoBDStudentModel.FK_Users_Roles" ManuallyRouted="false" />
+      </Diagram>
+    </edmx:Diagrams>
+  </edmx:Designer>
+</edmx:Edmx>
