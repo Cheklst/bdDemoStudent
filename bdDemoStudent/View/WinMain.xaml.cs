@@ -32,12 +32,11 @@ namespace bdDemoStudent.View
                 switch (Helper.users.Roles.Id)
                 {
                     case (int)pageDemo.PageAdmin:
-                        MessageBox.Show("Администратор", "Выбор",
-                            MessageBoxButton.OK, MessageBoxImage.Warning);
+                        Statistic.Visibility = Visibility.Visible;
+                        OpenPageDemo(pageDemo.PageAdmin);
                         break;
                     case (int)pageDemo.PageUser:
-                        MessageBox.Show("Пользователь", "Выбор", MessageBoxButton.OK,
-                            MessageBoxImage.Warning);
+                        OpenPageDemo(pageDemo.PageUser);
                         break;
                 }
             }
@@ -46,11 +45,56 @@ namespace bdDemoStudent.View
                 Close();
             }
         }
+        public void OpenPageDemo(pageDemo page)
+        {
+            switch (page)
+            {
+                case pageDemo.PageUser:
+                    FrameMainDemo.Navigate(new PageUser(this));
+                    break;
+                //case pageDemo.PageAdmin:
+                //    FrameMainDemo.Navigate(new PageAdmin(this));
+                //    break;
+            }
+        }
 
-        private void Button_Click(object sender, RoutedEventArgs e)
+        private void endWin(object sender, System.ComponentModel.CancelEventArgs e)
         {
             Helper.ActiveAdd();
-            Application.Current.Shutdown();
+        }
+        private void CheckMenu(object sender, RoutedEventArgs e)
+        {
+            if (menuCheck.IsCheckable == true)
+            {
+                MessageBox.Show("Элемент выбран","Информация",MessageBoxButton.OK, MessageBoxImage.Information);
+            }
+        }
+        private void CheckMenu1(object sender, RoutedEventArgs e)
+        { 
+        }
+        private void endWin(object sender, RoutedEventArgs e)
+        {
+            Helper.ActiveAdd();
+            this.Close();
+        }
+        private void Activ(object sender, RoutedEventArgs e)
+        {
+            //WinActiv winActiv = new WinActiv();
+            //var loc = this.PointToScreen(new Point(0, 0));
+            //winActiv.Left = loc.X;
+            //winActiv.Top = loc.Y = 60;
+            //winActiv.ShowDialog();
+        }
+        private void Profil(object sender, RoutedEventArgs e)
+        {
+            //WinProfil winProfil = new WinProfil(this);
+            //winProfil.ShowDialog();
+        }
+        private void Click_Check1(object sender, RoutedEventArgs e)
+        {
+
+            FrameMainDemo.Refresh();
+
         }
     }
 }

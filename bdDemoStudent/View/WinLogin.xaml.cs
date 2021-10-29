@@ -52,12 +52,12 @@ namespace bdDemoStudent.View
                 if (res.Count() == 1)
                 {
                     Helper.users = res.FirstOrDefault();
-                    Helper.ActiveAdd();
+                    Helper.ActiveAdd(); //!!!!
                     this.Close();
                 }
                 if (res.Count() == 0)
                 {
-                    MessageBox.Show("Нет записей","Ошибка",MessageBoxButton.YesNo, MessageBoxImage.Error);
+                    MessageBox.Show("Нет записей","Ошибка",MessageBoxButton.OK, MessageBoxImage.Error);
                     _error += 1;
                 }
             }
