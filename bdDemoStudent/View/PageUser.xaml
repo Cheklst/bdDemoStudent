@@ -3,7 +3,8 @@
       xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
       xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
       xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
-      xmlns:local="clr-namespace:bdDemoStudent.View"
+      xmlns:local="clr-namespace:bdDemoStudent.View" 
+      xmlns:xctk="http://schemas.xceed.com/wpf/xaml/toolkit"
       mc:Ignorable="d" 
       Loaded="LoadGrid"
       d:DesignHeight="450" d:DesignWidth="800"
@@ -14,7 +15,7 @@
             <RowDefinition Height="auto"/>
         </Grid.RowDefinitions>
         <StackPanel Orientation="Vertical" VerticalAlignment="Center">
-            <GroupBox HorizontalAlignment="Left" Width="auto" Margin="0,10,0,0">
+            <GroupBox x:Name="GR_BOX" HorizontalAlignment="Left" Width="auto" Margin="0,10,0,0">
                 <GroupBox.Header>
                     <StackPanel Orientation="Horizontal">
                         <Image Source="pack://application:,,,/JPG/search1.png" Width="32" VerticalAlignment="Top"/>
@@ -23,18 +24,18 @@
                 </GroupBox.Header>
                 <StackPanel Orientation="Horizontal">
                     <StackPanel Orientation="Vertical">
-                        <StackPanel Orientation="Horizontal" HorizontalAlignment="Right">
-                            <Label x:Name="Fam" Content="Фамилия  "/>
-                            <TextBox x:Name="Name1" Width="200"/>
+                        <StackPanel x:Name="FamSearch" Orientation="Horizontal" HorizontalAlignment="Left" Margin="50,0,0,0" Width="200">
+                            <Label Content="Фамилия  " Width="61"/>
+                            <xctk:WatermarkTextBox FontSize="16" x:Name="Name1" Width="139"/>
                         </StackPanel>
-                        <StackPanel Orientation="Horizontal" HorizontalAlignment="Right">
-                            <Label x:Name="Im" Content="Имя  "/>
-                            <TextBox x:Name="Name2" Width="200"/>
+                        <StackPanel x:Name="GoddSearch" Orientation="Horizontal" HorizontalAlignment="Left">
+                            <Label Content="Год поступления  " Width="110"/>
+                            <xctk:WatermarkComboBox x:Name="GodSearch" Width="74" Height="30" FontFamily="14" VerticalContentAlignment="Center"/>
                         </StackPanel>
-                        <StackPanel Orientation="Horizontal" HorizontalAlignment="Right" Margin="0,3,0,-3">
-                            <Label  x:Name="gro" Content="Группа  "/>
-                            <ComboBox x:Name="GroupSearch" Width="100" Margin="0,0,100,10" SelectedValuePath="Id"
-                                  DisplayMemberPath="Name"/>
+                        <StackPanel x:Name="GrSearch" Orientation="Horizontal" HorizontalAlignment="Right" Width="195">
+                            <Label Content="Группа  " Width="57"/>
+                            <xctk:WatermarkComboBox x:Name="GroupSearch" Width="94" Height="30" FontSize="14" VerticalContentAlignment="Center"
+                                                    SelectedValuePath="Id" DisplayMemberPath="Name" Margin="0,0,42,0"/>
                         </StackPanel>
                     </StackPanel>
                     <StackPanel Orientation="Horizontal" Margin="20,0,0,0">

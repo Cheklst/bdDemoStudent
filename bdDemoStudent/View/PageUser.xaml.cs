@@ -26,137 +26,92 @@ namespace bdDemoStudent.View
         }
         private void LoadGrid(object sender, RoutedEventArgs e)
         {
-            if (pw.Check_1.IsChecked == true)
-            {
-                Name1.Visibility = Visibility.Visible;
-                Fam.Visibility = Visibility.Visible;
-            }
-            else
-            {
-                Name1.Visibility = Visibility.Collapsed;
-                Fam.Visibility = Visibility.Collapsed;
-            }
-            if (pw.Check_2.IsChecked == true)
-            {
-                Name2.Visibility = Visibility.Visible;
-                Im.Visibility = Visibility.Visible;
-            }
-            else
-            {
-                Name2.Visibility = Visibility.Collapsed;
-                Im.Visibility = Visibility.Collapsed;
-            }
-            if (pw.Check_3.IsChecked == true)
-            {
-                GroupSearch.Visibility = Visibility.Visible;
-                gro.Visibility = Visibility.Visible;
-            }
-            else
-            {
-                GroupSearch.Visibility = Visibility.Collapsed;
-                gro.Visibility = Visibility.Collapsed;
-            }
-            GridMain.ItemsSource = Helper.demoBd.Users.ToList();
-            if (pw.Check2_1.IsChecked == true)
-            {
-                Group.Visibility = Visibility.Visible;
-            }
-            else
-            {
-                Group.Visibility = Visibility.Collapsed;
-            }
-            if (pw.Check2_2.IsChecked == true)
-            {
-                N1.Visibility = Visibility.Visible;
-            }
-            else
-            {
-                N1.Visibility = Visibility.Collapsed;
-            }
-            if (pw.Check2_3.IsChecked == true)
-            {
-                N2.Visibility = Visibility.Visible;
-            }
-            else
-            {
-                N2.Visibility = Visibility.Collapsed;
-            }
-            if (pw.Check2_4.IsChecked == true)
-            {
-                N3.Visibility = Visibility.Visible;
-            }
-            else
-            {
-                N3.Visibility = Visibility.Collapsed;
-            }
-            if (pw.Check2_5.IsChecked == true)
-            {
-                Year.Visibility = Visibility.Visible;
-            }
-            else
-            {
-                Year.Visibility = Visibility.Collapsed;
-            }
-            if (pw.Check2_6.IsChecked == true)
-            {
-                MobTel.Visibility = Visibility.Visible;
-            }
-            else
-            {
-                MobTel.Visibility = Visibility.Collapsed;
-            }
-            if (pw.Check2_7.IsChecked == true)
-            {
-                HomeTel.Visibility = Visibility.Visible;
-            }
-            else
-            {
-                HomeTel.Visibility = Visibility.Collapsed;
-            }
-            if (pw.Check2_8.IsChecked == true)
-            {
-                Mail.Visibility = Visibility.Visible;
-            }
-            else
-            {
-                Mail.Visibility = Visibility.Collapsed;
-            }
-            if (pw.Check2_9.IsChecked == true)
-            {
-                Country.Visibility = Visibility.Visible;
-            }
-            else
-            {
-                Country.Visibility = Visibility.Collapsed;
-            }
+            GodSearch.ItemsSource = Enumerable.Range(2000, DateTime.Now.Year - 2000 + 1);
             var hh = Helper.demoBd.Groups;
             GridMain.ItemsSource = Helper.demoBd.Users.ToList();
             GroupSearch.DataContext = hh;
             GroupSearch.ItemsSource = hh.ToList();
+
+            if (pw.Check_1.IsChecked == false && pw.Check_2.IsChecked == false && pw.Check_3.IsChecked == false)
+                GR_BOX.Visibility = Visibility.Collapsed;
+            else
+                GR_BOX.Visibility = Visibility.Visible;
+
+            if (pw.Check_1.IsChecked == true)
+                FamSearch.Visibility = Visibility.Visible;
+            else
+                FamSearch.Visibility = Visibility.Collapsed;
+
+
+            if (pw.Check_2.IsChecked == true)
+                GoddSearch.Visibility = Visibility.Visible;
+            else
+                GoddSearch.Visibility = Visibility.Collapsed;
+
+
+            if (pw.Check_3.IsChecked == true)
+                GrSearch.Visibility = Visibility.Visible;
+            else
+                GrSearch.Visibility = Visibility.Collapsed;
+
         }
         private void ResetSearch(object sender, RoutedEventArgs e)
         {
             GroupSearch.SelectedIndex = -1;
+            GodSearch.SelectedIndex = -1;
             Name1.Text = null;
-            Name2.Text = null;
             GridMain.ItemsSource = Helper.demoBd.Users.ToList();
         }
         private void Search(object sender, RoutedEventArgs e)
         {
-            if (string.IsNullOrEmpty(Name1.Text) && string.IsNullOrEmpty(Name2.Text) && GroupSearch.SelectedIndex == -1)
-            {
+            if (string.IsNullOrEmpty(Name1.Text) && GodSearch.SelectedIndex == -1 && GroupSearch.SelectedIndex == -1)
                 return;
-            }
-            if (GroupSearch.SelectedIndex == -1)
+            if (string.IsNullOrEmpty(Name1.Text))
             {
-                GridMain.ItemsSource = Helper.demoBd.Users.Where(i => i.Name1.Contains(Name1.Text) &&
-                                                               i.Name2.Contains(Name2.Text)).ToList();
+                if (GodSearch.SelectedIndex != -1 && GroupSearch.SelectedIndex != -1)
+                {
+                    GridMain.ItemsSource = Helper.demoBd.Users.Where(i => i.IdGroup == (int)GroupSearch.SelectedValue && i.DateOfReceipt == (int)GodSearch.SelectedValue).ToList();
+                }
+                else
+                {
+                    if (GodSearch.SelectedIndex == -1)
+                    {
+                        GridMain.ItemsSource = Helper.demoBd.Users.Where(i => i.IdGroup == (int)GroupSearch.SelectedValue).ToList();
+                    }
+                    else
+                    {
+                        GridMain.ItemsSource = Helper.demoBd.Users.Where(i => i.DateOfReceipt == (int)GodSearch.SelectedValue).ToList();
+                    }
+                }
             }
             else
             {
-                GridMain.ItemsSource = Helper.demoBd.Users.Where(i => i.Name1.Contains(Name1.Text) &&
-                                                               i.Name2.Contains(Name2.Text) &&
-                                                               i.IdGroup == (int)GroupSearch.SelectedValue).ToList();
+                if (GodSearch.SelectedIndex != -1 && GroupSearch.SelectedIndex != -1)
+                {
+                    GridMain.ItemsSource = Helper.demoBd.Users.Where(i => i.Name1.Contains(Name1.Text) &&
+                    i.IdGroup == (int)GroupSearch.SelectedValue &&
+                    i.DateOfReceipt == (int)GodSearch.SelectedValue).ToList();
+                }
+                else
+                {
+                    if (GodSearch.SelectedIndex == -1 && GroupSearch.SelectedIndex == -1)
+                    {
+                        GridMain.ItemsSource = Helper.demoBd.Users.Where(i => i.Name1.Contains(Name1.Text)).ToList();
+                    }
+                    else
+                    {
+                        if (GroupSearch.SelectedIndex != -1)
+                        {
+                            GridMain.ItemsSource = Helper.demoBd.Users.Where(i => i.Name1.Contains(Name1.Text) &&
+                            i.IdGroup == (int)GroupSearch.SelectedValue).ToList();
+                        }
+                        else
+                        {
+                            GridMain.ItemsSource = Helper.demoBd.Users.Where(i => i.Name1.Contains(Name1.Text) && 
+                            i.DateOfReceipt == (int)GodSearch.SelectedValue).ToList();
+                        }
+                    }
+                }
             }
         }
     }

@@ -1,0 +1,17 @@
+﻿<Window x:Class="bdDemoStudent.View.WinProfil"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:bdDemoStudent.View"
+        mc:Ignorable="d"
+        Title="WinProfil" Height="450" Width="800">
+    <Grid>
+        <ComboBox x:Name="ComboPol" HorizontalAlignment="Left" Margin="62,40,0,0" VerticalAlignment="Top" Width="120"/>
+        <ComboBox x:Name="ComboCount" HorizontalAlignment="Left" Margin="62,85,0,0" VerticalAlignment="Top" Width="120"/>
+        <TextBox  x:Name="NameFiles" HorizontalAlignment="Left" Height="23" Margin="62,147,0,0" TextWrapping="Wrap" Text="TextBox" VerticalAlignment="Top" Width="120"/>
+        <Image x:Name="ImageUser" HorizontalAlignment="Left" Height="100" Margin="482,128,0,0" VerticalAlignment="Top" Width="100"/>
+        <GroupBox x:Name="GrBox" Header="GroupBox" HorizontalAlignment="Left" Height="100" Margin="79,245,0,0" VerticalAlignment="Top" Width="100"/>
+
+    </Grid>
+</Window>

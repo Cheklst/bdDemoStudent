@@ -34,7 +34,7 @@ namespace bdDemoStudent
         public Nullable<int> IdGroup { get; set; }
         public Nullable<int> IdGender { get; set; }
         public Nullable<int> IdRol { get; set; }
-        public Nullable<System.DateTime> DateOfReceipt { get; set; }
+        public Nullable<int> DateOfReceipt { get; set; }
         public string NameFiles { get; set; }
     
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]

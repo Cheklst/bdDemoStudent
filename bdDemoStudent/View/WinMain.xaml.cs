@@ -25,6 +25,7 @@ namespace bdDemoStudent.View
         public WinMain()
         {
             InitializeComponent();
+            //configSt = new ConfigSt(this);
             WinLogin winLogin = new WinLogin();
             winLogin.ShowDialog();
             try
@@ -72,23 +73,23 @@ namespace bdDemoStudent.View
         private void CheckMenu1(object sender, RoutedEventArgs e)
         { 
         }
-        private void endWin(object sender, RoutedEventArgs e)
+        private void endWin1(object sender, RoutedEventArgs e)
         {
             Helper.ActiveAdd();
             this.Close();
         }
         private void Activ(object sender, RoutedEventArgs e)
         {
-            //WinActiv winActiv = new WinActiv();
-            //var loc = this.PointToScreen(new Point(0, 0));
-            //winActiv.Left = loc.X;
-            //winActiv.Top = loc.Y = 60;
-            //winActiv.ShowDialog();
+            WinActiv winActiv = new WinActiv();
+            var loc = this.PointToScreen(new Point(0, 0));
+            winActiv.Left = loc.X;
+            winActiv.Top = loc.Y = 60;
+            winActiv.ShowDialog();
         }
         private void Profil(object sender, RoutedEventArgs e)
         {
-            //WinProfil winProfil = new WinProfil(this);
-            //winProfil.ShowDialog();
+            WinProfil winProfil = new WinProfil(this);
+            winProfil.ShowDialog();
         }
         private void Click_Check1(object sender, RoutedEventArgs e)
         {

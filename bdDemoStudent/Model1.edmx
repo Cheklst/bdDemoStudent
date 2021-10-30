@@ -72,7 +72,7 @@
           <Property Name="IdGroup" Type="int" />
           <Property Name="IdGender" Type="int" />
           <Property Name="IdRol" Type="int" />
-          <Property Name="DateOfReceipt" Type="date" />
+          <Property Name="DateOfReceipt" Type="int" />
           <Property Name="NameFiles" Type="nvarchar" MaxLength="50" />
         </EntityType>
         <Association Name="FK_Activites_Users">
@@ -241,7 +241,7 @@
           <Property Name="IdGroup" Type="Int32" />
           <Property Name="IdGender" Type="Int32" />
           <Property Name="IdRol" Type="Int32" />
-          <Property Name="DateOfReceipt" Type="DateTime" Precision="0" />
+          <Property Name="DateOfReceipt" Type="Int32" />
           <Property Name="NameFiles" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
           <NavigationProperty Name="Activites" Relationship="Self.FK_Activites_Users" FromRole="Users" ToRole="Activites" />
           <NavigationProperty Name="Country" Relationship="Self.FK_Users_Country" FromRole="Users" ToRole="Country" />

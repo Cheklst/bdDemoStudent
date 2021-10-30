@@ -14,7 +14,6 @@ namespace bdDemoStudent.Class
             public bool ch_1;
             public bool ch_2;
             public bool ch_3;
-            public bool ch_4;
             public bool ch_2_1;
             public bool ch_2_2;
             public bool ch_2_3;
