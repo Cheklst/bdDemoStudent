@@ -132,9 +132,10 @@
                         <CheckBox x:Name="Check2_7" Content="Тел. мобильный" IsChecked="True" Grid.Row="1" Grid.Column="1" Margin="0,0,0,5" Click="Click_Check1"/>
                         <CheckBox x:Name="Check2_8" Content="Email" IsChecked="True" Grid.Row="2" Grid.Column="2" Margin="0,0,0,5" Click="Click_Check1"/>
                         <CheckBox x:Name="Check2_9" Content="Адрес проживания" IsChecked="True" Grid.Row="3" Grid.Column="1" Margin="0,0,5,0" Click="Click_Check1"/>
+                        <CheckBox x:Name="Check2_10" Content="Группа" IsChecked="True" Grid.Row="4" Grid.Column="1" Margin="0,0,5,0" Click="Click_Check1"/>
                     </Grid>
                 </GroupBox>
-            </StackPanel>
+            </StackPanel> 
         </GroupBox>
         <Frame x:Name="FrameMainDemo" NavigationUIVisibility="Hidden" Grid.Column="1" Grid.Row="1"/>
     </Grid>

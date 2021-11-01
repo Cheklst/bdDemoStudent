@@ -23,18 +23,18 @@
                     </StackPanel>
                 </GroupBox.Header>
                 <StackPanel Orientation="Horizontal">
-                    <StackPanel Orientation="Vertical">
+                    <StackPanel Orientation="Vertical" VerticalAlignment="Center">
                         <StackPanel x:Name="FamSearch" Orientation="Horizontal" HorizontalAlignment="Left" Margin="50,0,0,0" Width="200">
                             <Label Content="Фамилия  " Width="61"/>
-                            <xctk:WatermarkTextBox FontSize="16" x:Name="Name1" Width="139"/>
+                            <xctk:WatermarkTextBox FontSize="16" x:Name="Name1" Width="140"/>
                         </StackPanel>
                         <StackPanel x:Name="GoddSearch" Orientation="Horizontal" HorizontalAlignment="Left">
                             <Label Content="Год поступления  " Width="110"/>
                             <xctk:WatermarkComboBox x:Name="GodSearch" Width="74" Height="30" FontFamily="14" VerticalContentAlignment="Center"/>
                         </StackPanel>
-                        <StackPanel x:Name="GrSearch" Orientation="Horizontal" HorizontalAlignment="Right" Width="195">
-                            <Label Content="Группа  " Width="57"/>
-                            <xctk:WatermarkComboBox x:Name="GroupSearch" Width="94" Height="30" FontSize="14" VerticalContentAlignment="Center"
+                        <StackPanel x:Name="GrSearch" Orientation="Horizontal" HorizontalAlignment="Left" Width="232">
+                            <Label Content="Группа  " Width="56"/>
+                            <xctk:WatermarkComboBox x:Name="GroupSearch" Width="122" Height="30" FontSize="14" VerticalContentAlignment="Center"
                                                     SelectedValuePath="Id" DisplayMemberPath="Name" Margin="0,0,42,0"/>
                         </StackPanel>
                     </StackPanel>
@@ -71,6 +71,8 @@
                         <DataGridTextColumn x:Name="Mail" Header="Email" Binding="{Binding Path=Email, Mode=TwoWay,
                             UpdateSourceTrigger=PropertyChanged}"/>
                         <DataGridTextColumn x:Name="Country" Header="Гражданство" Binding="{Binding Path=Country.Name, Mode=TwoWay,
+                            UpdateSourceTrigger=PropertyChanged}"/>
+                        <DataGridTextColumn x:Name="Sex" Header="Пол" Binding="{Binding Path=Genders.Name, Mode=TwoWay,
                             UpdateSourceTrigger=PropertyChanged}"/>
                     </DataGrid.Columns>
                 </DataGrid>

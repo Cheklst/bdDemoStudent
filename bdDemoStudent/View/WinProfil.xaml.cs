@@ -43,8 +43,9 @@ namespace bdDemoStudent.View
         private void UserLoad(object sender, RoutedEventArgs e)
         {
             ComboPol.ItemsSource = Helper.demoBd.Genders.ToList();
-
+            ComboGroup.ItemsSource = Helper.demoBd.Groups.ToList();
             ComboCount.ItemsSource = Helper.demoBd.Country.ToList();
+
             var res = Helper.demoBd.Users.FirstOrDefault(i => i.Id == Helper.users.Id);
             GrBox.DataContext = res;
             if (string.IsNullOrEmpty(Helper.users.NameFiles) != true)
@@ -58,7 +59,7 @@ namespace bdDemoStudent.View
             string fullPathFile = "";
             OpenFileDialog photo = new OpenFileDialog();
             photo.Multiselect = true;
-            photo.Filter = "Image files (*.png;*.jpg;*.ico) | *.png;*.jpg;*.ico|All files (*.*)|*.*";
+            photo.Filter = "Image files (*.png;*.jpg;*.ico)|*.png;*.jpg;*.ico|All files (*.*)|*.*";
             photo.InitialDirectory = Helper.PatchApplication(Helper.PatchUser);
             if (photo.ShowDialog() == true)
             {
@@ -72,6 +73,15 @@ namespace bdDemoStudent.View
                 else
                     MessageBox.Show("Полные пути файлов не совпадают ", "Ошибка", MessageBoxButton.OK, MessageBoxImage.Error);
             }
+        }
+        private void Conm(object sender, SelectionChangedEventArgs e)
+        {
+            Spec.Text = Helper.demoBd.Groups.FirstOrDefault(i => i.Id == (int)ComboGroup.SelectedValue).Comment;
+
+        }
+        private void LoadProf(object sender, RoutedEventArgs e)
+        {
+            GodEdit.ItemsSource = Enumerable.Range(2000, DateTime.Now.Year - 2000 + 1);
         }
     }
 }

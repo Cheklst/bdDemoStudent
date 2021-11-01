@@ -36,23 +36,77 @@ namespace bdDemoStudent.View
                 GR_BOX.Visibility = Visibility.Collapsed;
             else
                 GR_BOX.Visibility = Visibility.Visible;
-
             if (pw.Check_1.IsChecked == true)
                 FamSearch.Visibility = Visibility.Visible;
             else
                 FamSearch.Visibility = Visibility.Collapsed;
-
-
             if (pw.Check_2.IsChecked == true)
                 GoddSearch.Visibility = Visibility.Visible;
             else
                 GoddSearch.Visibility = Visibility.Collapsed;
-
-
             if (pw.Check_3.IsChecked == true)
                 GrSearch.Visibility = Visibility.Visible;
             else
                 GrSearch.Visibility = Visibility.Collapsed;
+
+            if (pw.Check2_1.IsChecked == true)
+                N1.Visibility = Visibility.Visible;
+            else
+                N1.Visibility = Visibility.Collapsed;
+            if (pw.Check2_2.IsChecked == true)
+                N2.Visibility = Visibility.Visible;
+            else
+                N2.Visibility = Visibility.Collapsed;
+            if (pw.Check2_3.IsChecked == true)
+                N3.Visibility = Visibility.Visible;
+            else
+                N3.Visibility = Visibility.Collapsed;
+            if (pw.Check2_4.IsChecked == true)
+                Sex.Visibility = Visibility.Visible;
+            else
+                Sex.Visibility = Visibility.Collapsed;
+            if (pw.Check2_5.IsChecked == true)
+                Year.Visibility = Visibility.Visible;
+            else
+                Year.Visibility = Visibility.Collapsed;
+            if (pw.Check2_6.IsChecked == true)
+                HomeTel.Visibility = Visibility.Visible;
+            else
+                HomeTel.Visibility = Visibility.Collapsed;
+            if (pw.Check2_7.IsChecked == true)
+                MobTel.Visibility = Visibility.Visible;
+            else
+                MobTel.Visibility = Visibility.Collapsed;
+            if (pw.Check2_8.IsChecked == true)
+                Mail.Visibility = Visibility.Visible;
+            else
+                Mail.Visibility = Visibility.Collapsed;
+            if (pw.Check2_9.IsChecked == true)
+                Country.Visibility = Visibility.Visible;
+            else
+                Country.Visibility = Visibility.Collapsed;
+            if (pw.Check2_10.IsChecked == true)
+                Group.Visibility = Visibility.Visible;
+            else
+                Group.Visibility = Visibility.Collapsed;
+
+            if (pw.Check2_1.IsChecked == false 
+                && pw.Check2_2.IsChecked == false 
+                && pw.Check2_3.IsChecked == false 
+                && pw.Check2_4.IsChecked == false 
+                && pw.Check2_5.IsChecked == false 
+                && pw.Check2_6.IsChecked == false 
+                && pw.Check2_7.IsChecked == false 
+                && pw.Check2_8.IsChecked == false 
+                && pw.Check2_9.IsChecked == false 
+                && pw.Check2_10.IsChecked == false)
+            {
+                GridMain.Visibility = Visibility.Collapsed;
+            }
+            else
+            {
+                GridMain.Visibility = Visibility.Visible;
+            }
 
         }
         private void ResetSearch(object sender, RoutedEventArgs e)
