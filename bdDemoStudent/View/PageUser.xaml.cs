@@ -132,7 +132,7 @@ namespace bdDemoStudent.View
                     {
                         GridMain.ItemsSource = Helper.demoBd.Users.Where(i => i.IdGroup == (int)GroupSearch.SelectedValue).ToList();
                     }
-                    else
+                    else 
                     {
                         GridMain.ItemsSource = Helper.demoBd.Users.Where(i => i.DateOfReceipt == (int)GodSearch.SelectedValue).ToList();
                     }

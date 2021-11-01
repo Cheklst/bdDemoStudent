@@ -26,7 +26,7 @@
                     </Button>
                 </StackPanel>
             </GroupBox.Header>
-            <Grid Height="10">
+            <Grid Margin="10">
                 <Grid.ColumnDefinitions>
                     <ColumnDefinition Width="auto"/>
                     <ColumnDefinition Width="auto"/>
@@ -128,7 +128,7 @@
                         </StackPanel>
                         <StackPanel Orientation="Horizontal" HorizontalAlignment="Right" Grid.Row="3">
                             <Label Content="Тел. Моб : " HorizontalAlignment="Right" VerticalAlignment="Center"/>
-                            <xctk:WatermarkTextBox FontSize="16" VerticalAlignment="Center" Text="{Binding Path=MobilPhone, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}"/>
+                            <xctk:WatermarkTextBox FontSize="16"  VerticalAlignment="Center" Text="{Binding Path=MobilPhone, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}"/>
                             <Label Content="Тел. дом : " HorizontalAlignment="Right" VerticalAlignment="Center"/>
                             <xctk:WatermarkTextBox FontSize="16" VerticalAlignment="Center" Text="{Binding Path=MobilPhone, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}"/>
                         </StackPanel>

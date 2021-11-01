@@ -51,7 +51,6 @@
     <Reference Include="System.Data" />
     <Reference Include="System.Runtime.Serialization" />
     <Reference Include="System.Security" />
-    <Reference Include="System.Windows.Forms" />
     <Reference Include="System.Xml" />
     <Reference Include="Microsoft.CSharp" />
     <Reference Include="System.Core" />
@@ -64,19 +63,24 @@
     <Reference Include="WindowsBase" />
     <Reference Include="PresentationCore" />
     <Reference Include="PresentationFramework" />
-    <Reference Include="Xceed.Wpf.AvalonDock">
+    <Reference Include="Xceed.Wpf.AvalonDock, Version=4.1.0.0, Culture=neutral, PublicKeyToken=3e4669d2f30244f4, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
       <HintPath>..\..\..\..\Downloads\wpftoolkit-master\wpftoolkit-master\ExtendedWPFToolkitSolution\Src\Xceed.Wpf.Toolkit.LiveExplorer\bin\Debug\Xceed.Wpf.AvalonDock.dll</HintPath>
     </Reference>
-    <Reference Include="Xceed.Wpf.AvalonDock.Themes.Aero">
+    <Reference Include="Xceed.Wpf.AvalonDock.Themes.Aero, Version=4.1.0.0, Culture=neutral, PublicKeyToken=3e4669d2f30244f4, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
       <HintPath>..\..\..\..\Downloads\wpftoolkit-master\wpftoolkit-master\ExtendedWPFToolkitSolution\Src\Xceed.Wpf.Toolkit.LiveExplorer\bin\Debug\Xceed.Wpf.AvalonDock.Themes.Aero.dll</HintPath>
     </Reference>
-    <Reference Include="Xceed.Wpf.AvalonDock.Themes.Metro">
+    <Reference Include="Xceed.Wpf.AvalonDock.Themes.Metro, Version=4.1.0.0, Culture=neutral, PublicKeyToken=3e4669d2f30244f4, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
       <HintPath>..\..\..\..\Downloads\wpftoolkit-master\wpftoolkit-master\ExtendedWPFToolkitSolution\Src\Xceed.Wpf.Toolkit.LiveExplorer\bin\Debug\Xceed.Wpf.AvalonDock.Themes.Metro.dll</HintPath>
     </Reference>
-    <Reference Include="Xceed.Wpf.AvalonDock.Themes.VS2010">
+    <Reference Include="Xceed.Wpf.AvalonDock.Themes.VS2010, Version=4.1.0.0, Culture=neutral, PublicKeyToken=3e4669d2f30244f4, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
       <HintPath>..\..\..\..\Downloads\wpftoolkit-master\wpftoolkit-master\ExtendedWPFToolkitSolution\Src\Xceed.Wpf.Toolkit.LiveExplorer\bin\Debug\Xceed.Wpf.AvalonDock.Themes.VS2010.dll</HintPath>
     </Reference>
-    <Reference Include="Xceed.Wpf.Samples.SampleData">
+    <Reference Include="Xceed.Wpf.Samples.SampleData, Version=2.0.13161.5, Culture=neutral, PublicKeyToken=ba83ff368b7563c6, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
       <HintPath>..\..\..\..\Downloads\wpftoolkit-master\wpftoolkit-master\ExtendedWPFToolkitSolution\Src\Xceed.Wpf.Toolkit.LiveExplorer\bin\Debug\Xceed.Wpf.Samples.SampleData.dll</HintPath>
     </Reference>
     <Reference Include="Xceed.Wpf.Toolkit">

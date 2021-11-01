@@ -1,4 +1,5 @@
 ﻿using bdDemoStudent.Class;
+using Microsoft.Win32;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -8,7 +9,6 @@ using System.Windows;
 using System.Windows.Controls;
 using System.Windows.Data;
 using System.Windows.Documents;
-using System.Windows.Forms;
 using System.Windows.Input;
 using System.Windows.Media;
 using System.Windows.Media.Imaging;
@@ -61,6 +61,7 @@ namespace bdDemoStudent.View
             photo.Multiselect = true;
             photo.Filter = "Image files (*.png;*.jpg;*.ico)|*.png;*.jpg;*.ico|All files (*.*)|*.*";
             photo.InitialDirectory = Helper.PatchApplication(Helper.PatchUser);
+            var aaa = photo.ShowDialog();
             if (photo.ShowDialog() == true)
             {
                 fullPathFile = Helper.PatchApplication(Helper.PatchUser + photo.SafeFileName);
