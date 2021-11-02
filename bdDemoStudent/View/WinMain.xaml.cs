@@ -22,6 +22,7 @@ namespace bdDemoStudent.View
             PageAdmin = 1,
             PageUser
         }
+        public demo_wpfEntities bd_wpf = new demo_wpfEntities();
         public WinMain()
         {
             InitializeComponent();
@@ -53,9 +54,9 @@ namespace bdDemoStudent.View
                 case pageDemo.PageUser:
                     FrameMainDemo.Navigate(new PageUser(this));
                     break;
-                //case pageDemo.PageAdmin:
-                //    FrameMainDemo.Navigate(new PageAdmin(this));
-                //    break;
+                case pageDemo.PageAdmin:
+                    FrameMainDemo.Navigate(new PageAdmin(this));
+                    break;
             }
         }
 
@@ -75,7 +76,6 @@ namespace bdDemoStudent.View
         }
         private void endWin1(object sender, RoutedEventArgs e)
         {
-            Helper.ActiveAdd();
             this.Close();
         }
         private void Activ(object sender, RoutedEventArgs e)

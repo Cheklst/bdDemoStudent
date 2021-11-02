@@ -53,7 +53,7 @@
                         </Grid.RowDefinitions>
                         <StackPanel Orientation="Horizontal" HorizontalAlignment="Right" Grid.ColumnSpan="2" Margin="0,0,0.2,0.2">
                             <Label Content="Логин/Email: " HorizontalAlignment="Right" VerticalAlignment="Center"/>
-                            <xctk:WatermarkTextBox x:Name="Logg"  Text="{Binding Path=Email, Mode=TwoWay,
+                            <xctk:WatermarkTextBox x:Name="Logg" Style="{StaticResource textBoxXctk}"  Text="{Binding Path=Email, Mode=TwoWay,
                                 UpdateSourceTrigger=PropertyChanged}"
                                                    HorizontalAlignment="Left" VerticalAlignment="Center" Width="200" Grid.Column="1"/>
                             
@@ -61,7 +61,7 @@
                         <StackPanel Orientation="Horizontal" HorizontalAlignment="Right" Grid.ColumnSpan="2" Margin="0,31,0.2,0" Grid.RowSpan="3">
                             <Label Content="Пароль : " VerticalAlignment="Center"/>
                             <xctk:WatermarkTextBox x:Name="Pass"  Text="{Binding Path=Password, Mode=TwoWay,
-                                UpdateSourceTrigger=PropertyChanged}"
+                                UpdateSourceTrigger=PropertyChanged}"  Style="{StaticResource textBoxXctk}"
                                                    HorizontalAlignment="Left" VerticalAlignment="Center" Width="200"/>
                         </StackPanel>
                     </Grid>
@@ -78,23 +78,23 @@
                             <ColumnDefinition Width="auto"/>
                         </Grid.ColumnDefinitions>
                         <Label Content="Группа : " HorizontalAlignment="Right"/>
-                        <xctk:WatermarkComboBox x:Name="ComboGroup"  SelectionChanged="Conm" FontSize="16" HorizontalAlignment="Left" SelectedValuePath ="Id" DisplayMemberPath="Name" Grid.Column="1" SelectedValue="{Binding Path=IdGroup, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}" Margin="0"/>
+                        <xctk:WatermarkComboBox x:Name="ComboGroup" Style="{StaticResource Combowat}"  SelectionChanged="Conm" FontSize="16" HorizontalAlignment="Left" SelectedValuePath ="Id" DisplayMemberPath="Name" Grid.Column="1" SelectedValue="{Binding Path=IdGroup, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}" Margin="0"/>
                         <Label Content="Специальность : " HorizontalAlignment="Right" Grid.Row="1"/>
-                        <xctk:WatermarkTextBox x:Name="Spec" IsReadOnly="True" Text="{Binding Path=Groups.Comment}" HorizontalAlignment="Left" Width="200" Grid.Column="1" Grid.Row="1"/>
+                        <xctk:WatermarkTextBox x:Name="Spec" Style="{StaticResource textBoxXctk}" IsReadOnly="True" Text="{Binding Path=Groups.Comment}" HorizontalAlignment="Left" Width="200" Grid.Column="1" Grid.Row="1"/>
                         <Label Content="Дата поступления : " HorizontalAlignment="Right" Grid.Row="2"/>
-                        <xctk:WatermarkComboBox x:Name="GodEdit" FontSize="16" HorizontalAlignment="Left" SelectedValue="{Binding Path=DateOfReceipt, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}" Grid.Row="2" Grid.Column="1"/>
+                        <xctk:WatermarkComboBox x:Name="GodEdit" Style="{StaticResource Combowat}" FontSize="16" HorizontalAlignment="Left" SelectedValue="{Binding Path=DateOfReceipt, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}" Grid.Row="2" Grid.Column="1"/>
                     </Grid>
                 </GroupBox>
                 <StackPanel Orientation="Horizontal" Grid.Column="1">
                     <GroupBox Header="Файл" VerticalAlignment="Bottom" Margin="10">
                         <Border BorderBrush="#F4F4F4" BorderThickness="1">
                             <StackPanel Orientation="Horizontal">
-                                <xctk:WatermarkTextBox x:Name="NameFiles" Text="{Binding Path=NameFiles, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}" Width="160" IsReadOnly="True"/>
+                                <xctk:WatermarkTextBox x:Name="NameFiles" Style="{StaticResource textBoxXctk}" Text="{Binding Path=NameFiles, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}" Width="160" IsReadOnly="True"/>
                                 <Button Content="Выбор" Width="40" Click="AvatarUser"/>
                             </StackPanel>
                         </Border>
                     </GroupBox>
-                    <Button HorizontalAlignment="Right" Click="AvatarUser" Margin="30,-50,0,0">
+                    <Button HorizontalAlignment="Right" Template="{StaticResource ButtonJPG}" Click="AvatarUser" Margin="30,-50,0,0">
                         <Grid>
                             <Rectangle Width="140" Height="150" RadiusX="30" RadiusY="30" Grid.Column="1">
                                 <Rectangle.Fill>
@@ -116,32 +116,32 @@
                         </Grid.RowDefinitions>
                         <StackPanel Orientation="Horizontal" HorizontalAlignment="Right">
                             <Label Content="Фамилия : " HorizontalAlignment="Right" VerticalAlignment="Center"/>
-                            <xctk:WatermarkTextBox Text="{Binding Path=Name1,  Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}" HorizontalAlignment="Left" VerticalAlignment="Center" Width="200" Grid.Column="1"/>
+                            <xctk:WatermarkTextBox Text="{Binding Path=Name1,  Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}" Style="{StaticResource textBoxXctk}" HorizontalAlignment="Left" VerticalAlignment="Center" Width="200" Grid.Column="1"/>
                         </StackPanel>
                         <StackPanel Orientation="Horizontal" HorizontalAlignment="Right" Grid.Row="1">
                             <Label Content="Имя : " HorizontalAlignment="Right" VerticalAlignment="Center"/>
-                            <xctk:WatermarkTextBox Text="{Binding Path=Name2, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}" HorizontalAlignment="Left" VerticalAlignment="Center" Width="200" Grid.Column="1"/>
+                            <xctk:WatermarkTextBox Text="{Binding Path=Name2, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}" Style="{StaticResource textBoxXctk}" HorizontalAlignment="Left" VerticalAlignment="Center" Width="200" Grid.Column="1"/>
                         </StackPanel>
                         <StackPanel Orientation="Horizontal" HorizontalAlignment="Right" Grid.Row="2">
                             <Label Content="Отчество : " HorizontalAlignment="Right" VerticalAlignment="Center"/>
-                            <xctk:WatermarkTextBox Text="{Binding Path=Name3, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}" HorizontalAlignment="Left" VerticalAlignment="Center" Width="200" Grid.Column="1"/>
+                            <xctk:WatermarkTextBox Text="{Binding Path=Name3, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}" Style="{StaticResource textBoxXctk}" HorizontalAlignment="Left" VerticalAlignment="Center" Width="200" Grid.Column="1"/>
                         </StackPanel>
                         <StackPanel Orientation="Horizontal" HorizontalAlignment="Right" Grid.Row="3">
                             <Label Content="Тел. Моб : " HorizontalAlignment="Right" VerticalAlignment="Center"/>
-                            <xctk:WatermarkTextBox FontSize="16"  VerticalAlignment="Center" Text="{Binding Path=MobilPhone, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}"/>
+                            <xctk:MaskedTextBox FontSize="16" Style="{StaticResource MaskeText}" Mask="+7(000)000-00-00" VerticalAlignment="Center" Text="{Binding Path=MobilPhone, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}"/>
                             <Label Content="Тел. дом : " HorizontalAlignment="Right" VerticalAlignment="Center"/>
-                            <xctk:WatermarkTextBox FontSize="16" VerticalAlignment="Center" Text="{Binding Path=MobilPhone, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}"/>
+                            <xctk:MaskedTextBox FontSize="16" Style="{StaticResource MaskeText}" Mask="+7(000)000-00-00" VerticalAlignment="Center" Text="{Binding Path=HomePhone, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}"/>
                         </StackPanel>
 
                         <StackPanel Orientation="Horizontal" HorizontalAlignment="Left" Grid.Row="4">
-                            <Label Content="Дата рож.:" HorizontalAlignment="Right" VerticalAlignment="Center"/>
-                            <DatePicker x:Name="DateR" SelectedDateFormat="Short" SelectedDate="{Binding Path=YearOfBirth, Mode=TwoWay}" FontSize="16" Height="26" Margin="0,0,0,-0.4" VerticalAlignment="Top"/>
+                            <Label Content="Дата рож.:"  HorizontalAlignment="Right" VerticalAlignment="Center"/>
+                            <DatePicker x:Name="DateR" Style="{StaticResource Pictext}" SelectedDateFormat="Short" SelectedDate="{Binding Path=YearOfBirth, Mode=TwoWay}" FontSize="16" Height="26" Margin="0,0,0,-0.4" VerticalAlignment="Top"/>
                             <Label Content="Пол :" HorizontalAlignment="Left" VerticalAlignment="Center"/>
-                            <xctk:WatermarkComboBox x:Name="ComboPol" FontSize="16" VerticalAlignment="Center"
+                            <xctk:WatermarkComboBox x:Name="ComboPol" Style="{StaticResource Combowat}" FontSize="16" VerticalAlignment="Center"
                                                     SelectedValuePath="Id" DisplayMemberPath="Name"
                                                     SelectedValue="{Binding Path=IdGender, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}" Margin="0,0,20,0"/>
                             <Label Content="Гражданство :" HorizontalAlignment="Left" VerticalAlignment="Center"/>
-                            <xctk:WatermarkComboBox x:Name="ComboCount" FontSize="16" VerticalAlignment="Center"
+                            <xctk:WatermarkComboBox x:Name="ComboCount" Style="{StaticResource Combowat}" FontSize="16" VerticalAlignment="Center"
                                                     SelectedValuePath="Id" DisplayMemberPath="Name"
                                                     SelectedValue="{Binding Path=IdCountry, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}" Margin="0,0,20,0"/>
                         </StackPanel>

@@ -99,9 +99,9 @@
                         </StackPanel>
                     </GroupBox.Header>
                     <StackPanel Orientation="Vertical">
-                        <CheckBox x:Name="Check_1" Content="Фамилия" Margin="10,10,10,0" Click="Click_Check1"/>
-                        <CheckBox x:Name="Check_2" Content="Год поступления" Margin="10,5,10,0" Click="Click_Check1"/>
-                        <CheckBox x:Name="Check_3" Content="Группа" Margin="10,5,10,0" Click="Click_Check1"/>
+                        <CheckBox x:Name="Check_1" Content="Фамилия" Margin="10,10,10,0" IsChecked="True" Click="Click_Check1"/>
+                        <CheckBox x:Name="Check_2" Content="Год поступления" IsChecked="True" Margin="10,5,10,0" Click="Click_Check1"/>
+                        <CheckBox x:Name="Check_3" Content="Группа" IsChecked="True" Margin="10,5,10,0" Click="Click_Check1"/>
                     </StackPanel>
                 </GroupBox>
                 <GroupBox x:Name="Group1" Margin="30,5,0,0">
