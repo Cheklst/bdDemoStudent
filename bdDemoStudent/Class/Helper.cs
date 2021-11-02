@@ -12,6 +12,7 @@ namespace bdDemoStudent.Class
 {
     public static class Helper
     {
+        public static byte user = 0;
         public static demo_wpfEntities demoBd; //Ссылка на БД
         public static Activites activites;  //Ссылка активность
         public static Users users;  //Ссылка на юзера

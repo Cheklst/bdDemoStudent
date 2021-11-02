@@ -19,7 +19,7 @@ namespace bdDemoStudent.View
     public partial class PageAdmin : Page
     {
         WinMain pw;
-        int isAddEdit = 0;
+        int isAddEdit = 1;
         public PageAdmin(WinMain winMain)
         {
             InitializeComponent();
@@ -191,20 +191,15 @@ namespace bdDemoStudent.View
                         return;
                     }
                 }
-                isAddEdit = 0;
-                //else
-                //{
-                //    if (pw.bd_wpf.Users.Add(dgr.Item as Users) != null)
-                //    {
-                //        if (pw.bd_wpf.SaveChanges() == 0)
-                //        {
-                //            MessageBox.Show("Ошибка", "Ошибка записи", MessageBoxButton.OK, MessageBoxImage.Error);
-                //            isAddEdit = 0;
-                //            return;
-                //        }
-                //        isAddEdit = 0;
-                //    }
-                //}
+                else
+                {
+                    
+                        if (pw.bd_wpf.SaveChanges() == 0)
+                        {
+                            
+                            return;
+                        }
+                }
             }
         }
         private void PreviewKey(object sender, KeyEventArgs e)
@@ -244,7 +239,6 @@ namespace bdDemoStudent.View
                 }
             }
         }
-
         private void Save(object sender, RoutedEventArgs e)
         {
 

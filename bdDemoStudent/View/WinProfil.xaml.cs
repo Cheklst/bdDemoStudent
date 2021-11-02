@@ -30,7 +30,14 @@ namespace bdDemoStudent.View
         {
             Helper.demoBd.SaveChanges();
             this.Close();
-            pw.FrameMainDemo.Navigate(new PageUser(pw));
+            if (Helper.user == 0)
+            {
+                pw.FrameMainDemo.Navigate(new PageUser(pw));
+            }
+            else
+            {
+                pw.FrameMainDemo.Navigate(new PageAdmin(pw));
+            }
         }
         private void End(object sender, RoutedEventArgs e)
         {

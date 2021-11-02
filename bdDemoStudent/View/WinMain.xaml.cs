@@ -36,6 +36,7 @@ namespace bdDemoStudent.View
                     case (int)pageDemo.PageAdmin:
                         Statistic.Visibility = Visibility.Visible;
                         OpenPageDemo(pageDemo.PageAdmin);
+                        Helper.user = 1;
                         break;
                     case (int)pageDemo.PageUser:
                         OpenPageDemo(pageDemo.PageUser);
